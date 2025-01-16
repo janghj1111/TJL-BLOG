@@ -1,10 +1,11 @@
 {
   "name": "tjl_blog",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs --port 3001",
     "docs:build": "vuepress build docs"
   },
   "keywords": [],
@@ -12,6 +13,12 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
     "vuepress": "^2.0.0-rc.19"
+  },
+  "dependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.19",
+    "@vuepress/theme-default": "^2.0.0-rc.71"
   }
 }
