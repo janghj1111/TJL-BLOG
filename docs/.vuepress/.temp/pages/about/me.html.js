@@ -1,5 +1,5 @@
 import comp from "D:/TJL-BLOG/docs/.vuepress/.temp/pages/about/me.html.vue"
-const data = JSON.parse("{\"path\":\"/about/me.html\",\"title\":\"About Me\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"about/me.md\"}")
+const data = JSON.parse("{\"path\":\"/about/me.html\",\"title\":\"About Me\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{\"updatedTime\":1737014033000,\"contributors\":[{\"name\":\"janghj1111\",\"username\":\"janghj1111\",\"email\":\"janghj1111@naver.com\",\"commits\":1,\"url\":\"https://github.com/janghj1111\"}]},\"filePathRelative\":\"about/me.md\"}")
 export { comp, data }
 
 if (import.meta.webpackHot) {
