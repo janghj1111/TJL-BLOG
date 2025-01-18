@@ -1,19 +1,12 @@
 import { defaultTheme } from '@vuepress/theme-default'
 import { viteBundler } from '@vuepress/bundler-vite'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { getDirname, path } from '@vuepress/utils'
 
 export default {
     bundler: viteBundler(),
     theme: defaultTheme({
     sidebar: [
-    //   {
-    //     title: 'About',
-    //     path: '/guide/',
-    //     collapsable: false,
-    //     children: [
-    //       '/guide/getting-started',
-    //       '/guide/customization'
-    //     ]
-    //   }
     {
         text: 'About1',
         children: [
@@ -58,15 +51,6 @@ export default {
           ],
         },
       ],
-    // navbar: [
-    //     {
-    //       text: 'About',
-    //       items: [
-    //          { text: 'About Me', link: '/about/me' },
-    //          { text: 'About Blog', link: '/about/blog' } // '/about'으로 설정할경우에 '/about.md'를 렌더링
-    //       ]
-    //     }
-    // ],
   }),
   title: 'Today Jang Learned', // 사이트 제목
   description: '배웠던 것들을 기록하는 개인 블로그입니다.', // 사이트 설명
@@ -75,6 +59,13 @@ export default {
   ],
   plugins: [
     '@vuepress/last-updated', // 마지막 업데이트 시간 표시
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),   // 컴포넌트 폴더를 등록하는 방법
+      // components:{
+      //   TagList: path.resolve(__dirname, './components/TagList.vue'),   // 개별 컴포넌트를 등록하는 방법
+      //   MyComponent: path.resolve(__dirname, './components/MyComponent.vue'),   // 개별 컴포넌트를 등록하는 방법
+      // } 
+    })
   ],
   port : 3001,
 }
