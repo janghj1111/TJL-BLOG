@@ -133,7 +133,7 @@ ssh -T git@github.com
 
 이 과정을 완료한 후 다시 push를 시도해보세요:
 ```bash
-git push -f git@github.com:janghj1111/TJL-BLOG.git master:gh-pages
+git push -f git@github.com:{username}/{repository}.git master:gh-pages
 ```
 
 이렇게 하면 정상적으로 푸시가 될 것입니다.
